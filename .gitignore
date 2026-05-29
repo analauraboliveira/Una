@@ -1,0 +1,4 @@
+node_modules/
+.next/
+frontend-web/node_modules/
+frontend-web/.next/
