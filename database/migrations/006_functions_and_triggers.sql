@@ -255,7 +255,7 @@ RETURNS TABLE (
 LANGUAGE sql
 STABLE
 SECURITY DEFINER
-SET search_path = public
+SET search_path = public, extensions
 AS $$
     WITH user_location AS (
         -- PostGIS: MakePoint recebe (longitude, latitude) — ordem inversa ao padrão humano
