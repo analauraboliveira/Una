@@ -216,8 +216,6 @@ COMMENT ON TABLE feedbacks IS
     'Relatos de problemas enviados pelas estudantes. INSERT aciona trigger que notifica todos os admins.';
 COMMENT ON COLUMN feedbacks.is_specific IS
     'TRUE = problema específico (texto livre em description). FALSE = categoria pré-definida (COMUM no fluxo).';
-COMMENT ON COLUMN feedbacks.resolved_fields_consistent IS
-    'CHECK garante que resolved_by e resolved_at sejam preenchidos juntos quando status = resolved.';
 
 
 -- ------------------------------------------------------------
