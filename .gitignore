@@ -14,3 +14,5 @@ frontend-web/.env.*.local
 # Volumes Docker locais
 postgres_data/
 redis_data/
+.DS_Store
+database/.DS_Store

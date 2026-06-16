@@ -1,0 +1,1 @@
+// Proteção de rotas com JWT
