@@ -1,0 +1,46 @@
+# Dependências
+node_modules/
+frontend-web/node_modules/
+
+# Build artifacts
+.next/
+frontend-web/.next/
+out/
+frontend-web/out/
+build/
+
+# Variáveis de ambiente (nunca copiar para imagem Docker)
+.env
+.env.local
+.env.*.local
+frontend-web/.env
+frontend-web/.env.local
+frontend-web/.env.*.local
+
+# Git
+.git/
+.gitignore
+
+# Logs
+*.log
+npm-debug.log*
+
+# Cache
+.eslintcache
+frontend-web/.eslintcache
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Testes
+coverage/
+frontend-web/coverage/
+
+# Dados de desenvolvimento local
+postgres_data/
+redis_data/

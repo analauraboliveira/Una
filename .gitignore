@@ -2,3 +2,15 @@ node_modules/
 .next/
 frontend-web/node_modules/
 frontend-web/.next/
+
+# Variáveis de ambiente (nunca commitar valores reais)
+.env
+.env.local
+.env.*.local
+frontend-web/.env
+frontend-web/.env.local
+frontend-web/.env.*.local
+
+# Volumes Docker locais
+postgres_data/
+redis_data/
