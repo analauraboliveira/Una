@@ -22,6 +22,7 @@ type CentroUFPE = {
   sigla: string;
   lat: number;
   lon: number;
+  qtd: number; // ← novo: estoque total do centro
 };
 
 export default function MapaUfpe({ centros }: { centros: CentroUFPE[] }) {
@@ -31,10 +32,10 @@ export default function MapaUfpe({ centros }: { centros: CentroUFPE[] }) {
   return (
     <div className="h-[500px] w-full rounded-xl overflow-hidden shadow-lg border border-gray-200">
       {/* Container principal do Mapa */}
-      <MapContainer 
-        center={centroUfpe} 
-        zoom={15} 
-        scrollWheelZoom={true} 
+      <MapContainer
+        center={centroUfpe}
+        zoom={15}
+        scrollWheelZoom={true}
         className="h-full w-full"
         style={{ zIndex: 0 }} // Evita que o mapa cubra outros menus do site
       >
@@ -43,12 +44,11 @@ export default function MapaUfpe({ centros }: { centros: CentroUFPE[] }) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        
         {/* Percorre a lista de centros e desenha um marcador para cada um */}
         {centros.map((centro) => (
-          <Marker 
-            key={centro.id} 
-            position={[centro.lat, centro.lon]} 
+          <Marker
+            key={centro.id}
+            position={[centro.lat, centro.lon]}
             icon={customIcon}
           >
             <Popup>
@@ -56,6 +56,10 @@ export default function MapaUfpe({ centros }: { centros: CentroUFPE[] }) {
                 <strong className="text-blue-600 text-lg">{centro.sigla}</strong>
                 <br />
                 <span className="text-gray-700">{centro.nome}</span>
+                <br />
+                <span className="text-sm font-semibold text-pink-600">
+                  Estoque: {centro.qtd}
+                </span>
               </div>
             </Popup>
           </Marker>
