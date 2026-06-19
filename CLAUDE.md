@@ -10,9 +10,11 @@ Permite localizar pontos de coleta de produtos menstruais no campus, realizar re
 | Camada | Tecnologia | Localização |
 |---|---|---|
 | Frontend Web (Admin) | Next.js 16 + TailwindCSS | `frontend-web/` — **este repo** |
-| Frontend Mobile | React Native (Expo) | repo separado |
-| Backend API | Node.js + NestJS | repo separado |
-| Banco de Dados | PostgreSQL + PostGIS (Supabase) | `database/` |
+| Frontend Mobile | React Native (Expo) | `GabrielCarvalhoSI/una-mobile-app` |
+| Backend API | Node.js + NestJS | `anaraque-l/una-backend` |
+| Banco de Dados | PostgreSQL + PostGIS (Supabase) | `database/` — **este repo** |
+
+> A pasta `backend-api/` que existia neste repo foi removida — era uma versão obsoleta do backend. Use o repositório `anaraque-l/una-backend`.
 
 ## Banco de Dados — PostgreSQL + PostGIS no Supabase
 
